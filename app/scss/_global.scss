@@ -1,3 +1,19 @@
 body {
+  background-color: $default;
+  font-size: 16px;
+  line-height: 26px;
+  @extend %rubikmedium-500;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  color: $abg;
+  font-size: 18px;
+  line-height: 24px;
+  @extend %rubikmedium-500;
 }

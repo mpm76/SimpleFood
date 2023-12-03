@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../marcho"
+		}
+	],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Glee"
+  }
+}

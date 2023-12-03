@@ -3,5 +3,291 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 60px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.logo:focus {
+  border: 2px solid $orange-900;
+  border-radius: 8px;
+}
+
+.logo:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.logo:active {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item:not(:first-child) {
+    padding-left: 45px;
+  }
+
+  &__list-link {
+    color: #31352B;
+    font-size: 18px;
+    line-height: 21px;
+    @extend %rubikregular-400;
+  }
+
+  &__list-link:focus {
+    border: 2px solid $orange-900;
+    border-radius: 8px;
+  }
+
+  &__list-link:hover {
+    color: $orange-900;
+    transition: color 0.3s;
+  }
+
+  &__list-link:active {
+    color: $orange-900;
+    border-radius: none;
+    filter: drop-shadow(1px 1px 2px #31352B80);
+    transition: filter 0.3s;
+  }
+}
+
+.user-nav {
+  display: flex;
+  justify-content: start;
+
+
+  &__img--search {
+    color: #363853;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__img--search:hover {
+    background-color: $orange-900;
+    stroke: #FFFFFF;
+    stroke-width: 2px;
+    transition: background-color 0.3s;
+  }
+
+  &__img--cart {
+    color: #363853;
+    width: 28px;
+    height: 23px;
+  }
+
+  &__img--cart:hover {
+    background-color: $orange-900;
+    stroke: #FFFFFF;
+    stroke-width: 2px;
+    transition: background-color 0.3s;
+  }
+
+  &__link {
+    position: relative;
+    padding: 8px 14px;
+    margin-left: 30px;
+    background-color: $default;
+    border: none;
+  }
+
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $orange-900;
+    top: 9px;
+    right: 8px;
+    font-size: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 12px;
+  }
+
+  &__num:hover {
+    background-color: $default;
+    color: $orange-900;
+  }
+
+
+  &__link:focus {
+    background-color: #f1cfc4;
+    border: 2px solid $orange-900;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+  &__link:hover {
+    background-color: $orange-900;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+  &__link:active {
+    background-color: #f1cfc4;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+}
+
+footer {
+  background-color: $default;
+  padding-bottom: 30px;
+}
+
+.footer-top {
+  display: flex;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #C2C2C2;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-right: 70px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-right: 70px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__form-input {
+    display: block;
+    margin-bottom: 12px;
+    width: 200px;
+    height: 44px;
+    @extend %rubikregular-400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 13px 15px;
+    border: 1px solid #C2C2C2;
+  }
+
+  &__form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 44px;
+    background-color: $orange-900;
+    border: none;
+    color: #FFFFFF;
+
+    &__img--frame {
+      width: 16px;
+      height: 16px;
+      padding-left: 40px;
+    }
+
+    &__form--text {
+      color: #FFFFFF;
+      padding-left: 15px;
+      font-size: 14px;
+      line-height: 18px;
+      cursor: pointer;
+      @extend %rubikmedium-500;
+    }
+  }
+
+
+  &__nav {
+    width: 190px;
+    margin-right: 60px;
+  }
+
+  &__list {
+    font-size: 18px;
+    line-height: 24px;
+    @extend %rubikregular-400;
+  }
+
+  &__link {
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    @extend %rubikregular-400;
+  }
+
+  &__contact {
+    display: flex;
+    width: 180px;
+  }
+
+  &__adress,
+  &__email,
+  &__phone {
+    line-height: 36px;
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  &__social-list {
+    display: flex;
+  }
+
+  &__social-item {
+    display: flex;
+  }
+
+  &__social-link {
+    display: block;
+    padding-right: 22px;
+  }
+
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  &__copy {
+    @extend %rubikregular-400;
+    color: #31352B;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 @import 'media';
