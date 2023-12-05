@@ -1,8 +1,19 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   background-color: $default;
   font-size: 16px;
   line-height: 26px;
   @extend %rubikmedium-500;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
