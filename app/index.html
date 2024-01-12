@@ -50,29 +50,269 @@
 
   <main class="main">
 
-    <section class="delivery">
+    <section class="delivery-minutes">
       <div class="container">
-        <div class="delivery-minutes">
-          <div class="delivery-minutes-for">
-          <h1 class="delivery-minutes__title">
-            Доставка
-          </h1>
-          <h1 class="delivery-minutes__title--orange">
-            за 15 минут
-          </h1>
-          <p class="delivery-minutes__text">
-            Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-          </p>
-          <form action="#">
-          <button class="delivery-minutes__btn">Заказать</button>
-            <a class="delivery-minutes__link" href="#">
-          <p class="delivery-minutes__text">Подробнее</p>
+        <div class="delivery-minutes__inner">
+          <div class="delivery-minutes__content">
+            <h1 class="delivery-minutes__title">
+              Доставка
+            </h1>
+            <h1 class="delivery-minutes__title--orange">
+              за 15 минут
+            </h1>
+            <p class="delivery-minutes__text">
+              Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+            </p>
+            <form class="delivery-minutes__form" action="#">
+              <button class="delivery-minutes__btn">Заказать</button>
+              <a class="delivery-minutes__link" href="#">
+                <p class="delivery-minutes__text">Подробнее</p>
               </a>
             </form>
-            </div>
-            <img class="delivery-minutes__img" src="images/decor/scooter-guy.svg" alt="">
+          </div>
+          <img class="delivery-minutes__img" src="images/decor/scooter-guy.svg" alt="">
         </div>
       </div>
+    </section>
+
+    <section class="categories">
+      <div class="container">
+        <div class="categories__inner">
+          <div class="categories__title">
+            <h3 class="title">Популярные категории</h3>
+          </div>
+          <div class="categories-menu">
+
+            <ul class="categories-menu__list">
+
+              <li class="categories-menu__link">
+                <button class="categories-menu__btn--burgers">
+                  <svg class="categories-menu__img--burgers">
+                    <use xlink:href="images/sprite.svg#burger-menu"></use>
+                  </svg>
+                  <p class="categories-menu__text--burgers">
+                    Бургеры
+                  </p>
+                </button>
+              </li>
+
+              <li class="categories-menu__link">
+                <button class="categories-menu__btn--pizza">
+                  <svg class="categories-menu__img--pizza">
+                    <use xlink:href="images/sprite.svg#pizza-menu"></use>
+                  </svg>
+                  <p class="categories-menu__text--pizza">
+                    Пицца
+                  </p>
+                </button>
+              </li>
+
+              <li class="categories-menu__link">
+                <button class="categories-menu__btn--sandwiches">
+                  <svg class="categories-menu__img--sandwiches">
+                    <use xlink:href="images/sprite.svg#sandwich-menu"></use>
+                  </svg>
+                  <p class="categories-menu__text--sandwiches">
+                    Сендвичи
+                  </p>
+                </button>
+
+              </li>
+              <li class="categories-menu__link">
+                <button class="categories-menu__btn--asian">
+                  <svg class="categories-menu__img--asian">
+                    <use xlink:href="images/sprite.svg#asia-menu"></use>
+                  </svg>
+                  <p class="categories-menu__text--asian">Азиатская кухня</p>
+                </button>
+              </li>
+              <li class="categories-menu__link">
+                <button class="categories-menu__btn--sets">
+                  <svg class="categories-menu__img--sets">
+                    <use xlink:href="images/sprite.svg#sets-menu"></use>
+                  </svg>
+                  <p class="categories-menu__text--sets">Сеты</p>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="categories-items">
+
+            <div class="categories-items__item">
+              <img src="images/product/1.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Чизбургер с листьями салата
+              </p>
+              <p class="categories-items__price">
+                160 грн.
+              </p>
+              <div class="categories-items__btn">В корзину</div>
+            </div>
+
+            <div class="categories-items__item">
+              <img src="images/product/2.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Бифбургер
+              </p>
+              <p class="categories-items__price--num">
+                190 грн.
+              </p>
+              <div class="categories-items__btn">В корзину</div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/3.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Королевский чизбургер
+              </p>
+              <p class="categories-items__price--num">
+                260 грн.
+              </p>
+              <div class="categories-items__btn">В корзину</div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/4.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Черный гамбургер
+              </p>
+              <p class="categories-items__price--num">
+                190 грн.
+              </p>
+              <div class="categories-items__btn">В корзину</div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/5.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Чикен бургер
+              </p>
+              <p class="categories-items__price--num">
+                180 грн.
+              </p>
+              <div class="categories-items__btn">В
+                корзину</div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/6.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Чизбургер с листьями салата
+              </p>
+              <p class="categories-items__price">
+                160 грн.
+              </p>
+              <div class="categories-items__btn">
+                В корзину</div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/7.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Бифбургер
+              </p>
+              <p class="categories-items__price--num">
+                190
+                грн.
+              </p>
+              <div class="categories-items__btn">
+                В
+                корзину
+              </div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/8.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Королевский чизбургер
+              </p>
+              <p class="categories-items__price--num">
+                260
+                грн.
+              </p>
+              <div class="categories-items__btn">
+                В
+                корзину
+              </div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/9.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Черный гамбургер
+              </p>
+              <p class="categories-items__price--num">
+                199
+                грн.
+              </p>
+              <div class="categories-items__btn">
+                В
+                корзину
+              </div>
+            </div>
+            <div class="categories-items__item">
+              <img src="images/product/10.jpg" class="categories-items__img" alt="photo cheeseburger">
+              <p class="categories-items__text">
+                Чикен бургер
+              </p>
+              <p class="categories-items__price--num">
+                180
+                грн.
+              </p>
+              <div class="categories-items__btn">
+                В
+                корзину
+              </div>
+            </div>
+          </div>
+
+          <a class="categories-bottom__link" href="#">
+            <p class="categories-bottom__text">Показать еще</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stay-home">
+      <div class="container">
+        <div class="stay-home__inner">
+          <img class="stay-home__img" src="images/decor/food-delivery.svg" alt="food delivery">
+
+          <div class="stay-home__content">
+            <h3 class="stay-home__title">Оставайтесь дома,а мы позаботимся о еде</h3>
+            <p class="stay-home__text">
+              У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас и
+              получите скиидку!
+            </p>
+            <div class="stay-home__info">
+              <div class="stay-home__items">
+                <div class="stay-home__item">
+                  <svg class="stay-home__img--time">
+                    <use xlink:href="images/sprite.svg#time"></use>
+                  </svg>
+                  <div class="stay-home__item--text">
+                    Быстрая доставка за 15 минут
+                  </div>
+                </div>
+                <div class="stay-home__item">
+                  <svg class="stay-home__img--men">
+                    <use xlink:href="images/sprite.svg#men"></use>
+                  </svg>
+                  <div class="stay-home__item--text">
+                    Вежливые курьеры
+                  </div>
+                </div>
+                <div class="stay-home__item">
+                  <svg class="stay-home__img--resturent">
+                    <use xlink:href="images/sprite.svg#resturent"></use>
+                  </svg>
+                  <div class="stay-home__item--text">
+                    Более 500 заведений
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="stay-home__btn--link">
+              <button class="stay-home__btn">Подробнее</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </section>
 
   </main>
@@ -88,11 +328,11 @@
           <form action="#" class="footer-top__form">
             <input class="footer-top__form-input" type="email" placeholder="Ваш email" required>
             <button class="footer-top__form-btn" type="submit">
-              
+
               <p class="footer-top__form--text">
                 Подписаться
               </p>
-              
+
             </button>
           </form>
 
