@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -732,7 +733,259 @@ footer {
 
 }
 
+.best-restaurants {
+  margin-bottom: 120px;
 
+  &__title {
+    font-size: 36px;
+    line-height: 47px;
+    @extend %rubik-500;
+    text-align: center;
+    top: 5px;
+    margin-bottom: 45px;
+    color: $title;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+    grid-row-gap: 30px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+  }
+
+  &__item {
+    width: 370px;
+    height: 419px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  &__img {
+    width: 370px;
+    height: 300px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 31px;
+    @extend %rubik-400;
+    color: $abg;
+    margin-left: 20px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  &__watch {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__img--timer-1 {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  &__time {
+    font-size: 18px;
+    line-height: 30px;
+    @extend %rubik-400;
+    color: $abg;
+  }
+
+  &__btn {
+    width: 79px;
+    height: 33px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: $orange-900;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__img--arrow-small-right {
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+  }
+}
+
+.mobile-app {
+  margin: 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 45px 0;
+    font-size: 36px;
+    line-height: 46px;
+    @extend %rubik-500;
+    color: $title;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @extend %rubik-400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $abg;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__link {
+    padding-right: 30px;
+  }
+
+  &__img-big {
+    width: 570px;
+    height: 380px;
+    object-fit: cover;
+  }
+}
+
+.slider {
+  &__items {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 46px;
+    @extend %rubik-400;
+    color: $title;
+  }
+
+  &__img {
+    margin-left: 90px;
+    margin-right: 40px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 650px;
+    height: 240px;
+  }
+
+  &__blockquote {
+    font-size: 20px;
+    line-height: 30px;
+    @extend %rubik-400;
+    font-style: italic;
+    margin-top: 75px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 26px;
+    @extend %rubik-500;
+    color: $orange-900;
+  }
+
+  &__blockquote-text {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $abg;
+    margin-top: 10px;
+  }
+
+  &__blockquote-img--right {
+    width: 24px;
+    height: 19px;
+    margin-left: -28px;
+  }
+
+  &__blockquote-img--left {
+    width: 24px;
+    height: 19px;
+    right: 0;
+  }
+
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+  :not(:last-child) {
+    padding-right: 15px;
+  }
+
+  button {
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 48px;
+    border: none;
+    background-color: #C2C2C2;
+  }
+}
+
+
+.slick-arrow {
+  font-size: 0;
+}
+
+.slick-active button {
+  background-color: $orange-900;
+}
+
+.slick-prev {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  left: 0;
+  margin-top: 0;
+  margin-left: 480px;
+
+}
+
+.slick-next {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  right: 0;
+  margin-top: -14px;
+  margin-right: 480px;
+
+}
+
+.prev__arrow {
+  margin-right: 20px;
+}
 
 
 
