@@ -1,4 +1,13 @@
 $(function (params) {
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "₴"
+  });
+
+  $('.select-style').styler();
+  
+
   $('.slider__inner').slick({
     dots: true,
     prevArrow: '<button type = "button"class="slick-prev"><img src="images/icons/prev-arrow.svg" alt="arrow-left">Previous</button>',

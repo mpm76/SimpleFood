@@ -53,59 +53,61 @@
   }
 
   &__list-link {
-    color: #31352B;
+    color: $abg;
     font-size: 18px;
     line-height: 21px;
     @extend %rubik-400;
+
+    &:focus {
+      border: 2px solid $orange-900;
+      border-radius: 8px;
+    }
+
+    &:hover {
+      color: $orange-900;
+      transition: color 0.3s;
+    }
+
+    &:active {
+      color: $orange-900;
+      border-radius: none;
+      filter: drop-shadow(1px 1px 2px #31352B80);
+      transition: filter 0.3s;
+    }
   }
 
-  &__list-link:focus {
-    border: 2px solid $orange-900;
-    border-radius: 8px;
-  }
-
-  &__list-link:hover {
-    color: $orange-900;
-    transition: color 0.3s;
-  }
-
-  &__list-link:active {
-    color: $orange-900;
-    border-radius: none;
-    filter: drop-shadow(1px 1px 2px #31352B80);
-    transition: filter 0.3s;
-  }
 }
 
 .user-nav {
   display: flex;
   justify-content: start;
+  margin-left: 30px;
 
 
   &__img--search {
-    color: #363853;
+    color: $title;
     width: 24px;
     height: 24px;
-  }
 
-  &__img--search:hover {
-    background-color: $orange-900;
-    stroke: #FFFFFF;
-    stroke-width: 2px;
-    transition: background-color 0.3s;
+    &:hover {
+      background-color: $orange-900;
+      stroke: #FFFFFF;
+      stroke-width: 2px;
+      transition: background-color 0.3s;
+    }
   }
 
   &__img--cart {
-    color: #363853;
+    color: $title;
     width: 28px;
     height: 23px;
-  }
 
-  &__img--cart:hover {
-    background-color: $orange-900;
-    stroke: #FFFFFF;
-    stroke-width: 2px;
-    transition: background-color 0.3s;
+    &:hover {
+      background-color: $orange-900;
+      stroke: #FFFFFF;
+      stroke-width: 2px;
+      transition: background-color 0.3s;
+    }
   }
 
   &__link {
@@ -114,6 +116,27 @@
     margin-left: 30px;
     background-color: $default;
     border: none;
+
+    &:focus {
+      background-color: #f1cfc4;
+      border: 2px solid $orange-900;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    &:hover {
+      background-color: $orange-900;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    &active {
+      background-color: #f1cfc4;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
   }
 
   &__num {
@@ -128,33 +151,11 @@
     color: #FFFFFF;
     text-align: center;
     line-height: 12px;
-  }
 
-  &__num:hover {
-    background-color: $default;
-    color: $orange-900;
-  }
-
-
-  &__link:focus {
-    background-color: #f1cfc4;
-    border: 2px solid $orange-900;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-  }
-
-  &__link:hover {
-    background-color: $orange-900;
-    border: none;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-  }
-
-  &__link:active {
-    background-color: #f1cfc4;
-    border: none;
-    border-radius: 6px;
-    transition: background-color 0.3s;
+    &:hover {
+      background-color: $default;
+      color: $orange-900;
+    }
   }
 
 }
@@ -986,6 +987,434 @@ footer {
 .prev__arrow {
   margin-right: 20px;
 }
+
+.sub-menu {
+  background-color: rgba(255, 122, 80, 0.1);
+  padding: 24px;
+  margin-bottom: 60px;
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__list-item {
+    margin-right: 6px;
+  }
+
+  &__list-link {
+    font-size: 14px;
+    line-height: 17px;
+    @extend %rubik-400;
+    color: #505050;
+
+    &:focus {
+      border: 2px solid $orange-900;
+      border-radius: 8px;
+    }
+
+    &:hover {
+      color: $orange-900;
+      transition: color 0.3s;
+    }
+
+    &:active {
+      color: $orange-900;
+      border-radius: none;
+      filter: drop-shadow(1px 1px 2px #31352B80);
+      transition: filter 0.3s;
+    }
+  }
+
+  &__img {
+    width: 6px;
+    height: 10px;
+    margin-right: 6px;
+    margin-top: 9px;
+  }
+
+}
+
+.catalog {}
+
+.catalog-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 46px;
+    @extend %rubik-500;
+    color: $title;
+  }
+
+  &__filter {
+    width: 256px;
+    height: 47px;
+  }
+}
+
+// .jq-selectbox__select {
+//   background-color: #fff;
+//   border: 1px solid #C2C2C2;
+//   border-radius: 3px;
+//   height: 47px;
+// }
+
+
+.jq-selectbox__select {
+  margin-left: 5px;
+  height: 47px;
+  padding: 0 45px 0 10px;
+  border: 1px solid #C2C2C2;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 17px;
+  color: $abg;
+  @extend %rubik-400;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  background-color: #fff;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+  right: -10px;
+}
+
+.jq-selectbox__select-text {
+  font-size: 14px;
+  line-height: 17px;
+  color: $abg;
+  padding-top: 15px;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 19px;
+  right: 28px;
+  width: 6px;
+  height: 11px;
+  border: none;
+  background-image: url('../images/icons/chevron-right-2.svg');
+  background-repeat: no-repeat;
+  padding-left: 11px;
+}
+
+
+
+
+.catalog-product {
+  display: flex;
+  justify-content: space-between;
+
+  &__filter {
+    width: 271px;
+  }
+
+  &__filter-categories {
+    border: 1px solid #ECECEC;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 46px;
+    @extend %rubik-500;
+    color: $title;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ECECEC;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 28px;
+    @extend %rubik-400;
+    color: $title;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ECECEC;
+  }
+
+  &__link {
+    margin: 12px 15px;
+  }
+
+  &__link-text {
+    padding-left: 15px;
+    font-size: 18px;
+    line-height: 23px;
+    @extend %rubik-500;
+    color: $abg;
+
+    &:focus {
+      border: 2px solid $orange-900;
+      border-radius: 8px;
+    }
+
+    &:hover {
+      color: $orange-900;
+      transition: color 0.3s;
+    }
+
+    &:active {
+      color: $orange-900;
+      border-radius: none;
+      filter: drop-shadow(1px 1px 2px #31352B80);
+      transition: filter 0.3s;
+    }
+  }
+
+  &__food {
+    width: 870px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 2;
+    grid-row-gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+  }
+
+  &__item {
+    width: 210px;
+    height: 299px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px rgba(236, 236, 236, 1);
+    text-align: center;
+  }
+
+  &__img {
+    margin: 20px 35px;
+    width: 140px;
+    height: 140px;
+  }
+
+  &__text-one {
+    width: 180px;
+    font-size: 15px;
+    line-height: 17px;
+    @extend %rubik-400;
+    margin: 0 15px 10px;
+  }
+
+  &__text-king {
+    width: 180px;
+    font-size: 15px;
+    line-height: 17px;
+    @extend %rubik-400;
+    margin: 0 15px 28px;
+  }
+
+  &__text {
+    width: 180px;
+    font-size: 15px;
+    line-height: 17px;
+    @extend %rubik-400;
+    margin-bottom: 28px;
+  }
+
+  &__price {
+    font-size: 15px;
+    line-height: 21px;
+    @extend %rubik-500;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    font-size: 14px;
+    line-height: 18px;
+    @extend %rubik-400;
+    width: 101px;
+    height: 32px;
+    align-items: center;
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: $orange-900;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    padding: 7px 16px;
+    cursor: pointer;
+  }
+
+}
+
+.filter-offers {
+  width: 270px;
+  height: 205px;
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 30px;
+
+  &__label {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 12px;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked+.filter-offers__checkbox {
+      background-image: url('../images/icons/vector.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__checkbox {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-left: 15px;
+    margin-left: 17px;
+  }
+
+  &__checkbox--pink {
+    background-color: #FAEDED;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    margin-left: 17px;
+
+    &:active, &:hover {
+      border: 1px solid #363853;
+      border-radius: 3px;
+    }
+  }
+
+  &__text {
+    margin-left: 52px;
+    font-size: 18px;
+    line-height: 21px;
+    @extend %rubik-400;
+  }
+}
+
+.filter-price {
+  width: 270px;
+  height: 191px;
+  background-color: #fff;
+  &__label {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    @extend %rubik-400;
+    color: #C2C2C2;
+    margin: 9px;
+  }
+  &__btn {
+    width: 70px;
+    height: 40px;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    background-color: #FAEDED;
+    font-size: 16px;
+    line-height: 16px;
+    @extend %rubik-400;
+    color: $title;
+  }
+  &__input {
+    margin: 15px 20px;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 31px;
+  height: 2px;
+  background-color: #C2C2C2;
+  border-radius: 0;
+}
+
+.irs--flat .irs-handle {
+  top: 23px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $orange-900;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  top: 31px;
+  height: 2px;
+  background-color: $orange-900;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  display: none;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.promotions-discounts {
+  margin-bottom: 120px;
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 36px;
+    line-height: 47px;
+    @extend %rubik-500;
+    color: $title;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 370px;
+    height: 392px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 31px;
+    @extend %rubik-400;
+    color: $abg;
+    margin: 15px 20px;
+  }
+}
+
+
+
+
+
 
 
 
