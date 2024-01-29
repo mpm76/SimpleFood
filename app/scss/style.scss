@@ -155,6 +155,7 @@
     &:hover {
       background-color: $default;
       color: $orange-900;
+      transition: background-color 0.2s;
     }
   }
 
@@ -202,7 +203,21 @@ footer {
     padding: 13px 15px;
     border: 1px solid #C2C2C2;
     border-radius: 6px;
+    cursor: pointer;
+
+    &:focus {
+      border: 2px solid $orange-900;
+    }
+
   }
+
+  input:hover::placeholder {
+    color: $title;
+  }
+
+
+
+
 
   &__form-btn {
     display: flex;
@@ -216,27 +231,52 @@ footer {
     color: #FFFFFF;
     position: relative;
 
-    .footer-top__form--text::before {
-      content: '';
-      position: absolute;
-      background-repeat: no-repeat;
-      background-image: url('../images/sprite.svg#frame');
-      width: 15px;
-      height: 15px;
-      left: 43px;
-      top: 14px;
+    &:focus {
+      background-color: rgba(255, 122, 80, .1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-color: $orange-900;
+      stroke: $orange-900;
+      color: $orange-900;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      transition: all 0.3s;
+      border-color: $orange-900;
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border-color: #FFF2ED;
+
     }
   }
 
 
   &__form--text {
-    padding-left: 30px;
     color: #FFFFFF;
     font-size: 14px;
     line-height: 18px;
     cursor: pointer;
     @extend %rubik-500;
+
+    &:focus {
+      color: $orange-900;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: $orange-900;
+      transition: all 0.3s;
+    }
+
+    &:active {
+      color: $orange-900;
+    }
   }
+
 
 
 
@@ -315,8 +355,36 @@ footer {
     height: 40px;
     background-color: #ECECEC;
     border-radius: 50%;
+    margin-right: 15px;
 
-   
+    &:focus {
+      background-color: rgba(255, 122, 80, .1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-color: $orange-900;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      background-color: $orange-900;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      transition: all 0.3s;
+      border-color: $orange-900;
+      transition: all 0.3s;
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border-color: #FFF2ED;
+      transition: all 0.3s;
+    }
+
+  }
+
+  &__img {
+    path:hover {
+      fill: #fff;
+      transition: all 0.3s;
+    }
   }
 
   &__social-link {
@@ -324,9 +392,28 @@ footer {
     padding-right: 22px;
     padding-left: 10px;
     padding-top: 9px;
+    fill: #31352B;
+
+    &:hover {
+      fill: #fff;
+      transition: all 0.3s;
+    }
+  }
+
+  &__form-btn--img {
+    cursor: pointer;
+    margin-top: 1px;
+    margin-left: 10px;
+
+    path:hover {
+      fill: $orange-900;
+      transition: all 0.3s;
+    }
   }
 
 }
+
+
 
 .footer-bottom {
   text-align: center;
@@ -407,6 +494,7 @@ footer {
       border: 2px solid $orange-900;
       border-radius: 8px;
       text-decoration: none;
+      transition: background-color 0.3s;
     }
 
     &:hover {
@@ -448,6 +536,7 @@ footer {
       box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
       color: $orange-900;
       background-color: rgba(255, 122, 80, 0.1);
+      transition: background-color 0.3s;
     }
 
     &:hover {
@@ -459,6 +548,7 @@ footer {
       box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
       box-shadow: 0px 5px 12px 0px rgba(255, 104, 56, 0.2);
       color: $orange-900;
+      transition: background-color 0.3s;
     }
 
     &:active {
@@ -468,6 +558,7 @@ footer {
       color: $orange-900;
       border: none;
       border-radius: 5px;
+      transition: background-color 0.3s;
     }
   }
 
@@ -489,8 +580,6 @@ footer {
 }
 
 .categories {
-
-  &__inner {}
 
   &__title {
     text-align: center;
@@ -535,6 +624,7 @@ footer {
       border: 2px solid $orange-900;
       background-color: #fff;
       color: $title;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -542,6 +632,7 @@ footer {
       color: #FF6838;
       border: 2px solid $orange-900;
       border-radius: 5px;
+      transition: all 0.3s;
 
       path {
         fill: $orange-900;
@@ -552,6 +643,7 @@ footer {
       background-color: #fff;
       box-shadow: 0px -5px 12px 0px rgba(255, 104, 56, 0.2) inset;
       color: #363853;
+      transition: all 0.3s;
     }
   }
 
@@ -567,18 +659,21 @@ footer {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:hover {
       stroke: $orange-900;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:active {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
   }
 
@@ -602,6 +697,7 @@ footer {
       border: 2px solid $orange-900;
       background-color: #fff;
       color: $title;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -609,6 +705,7 @@ footer {
       color: #FF6838;
       border: 2px solid $orange-900;
       border-radius: 5px;
+      transition: all 0.3s;
 
       path {
         fill: $orange-900;
@@ -619,6 +716,7 @@ footer {
       background-color: #fff;
       box-shadow: 0px -5px 12px 0px rgba(255, 104, 56, 0.2) inset;
       color: #363853;
+      transition: all 0.3s;
     }
 
   }
@@ -633,18 +731,21 @@ footer {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:hover {
       stroke: $orange-900;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:active {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
   }
 
@@ -667,6 +768,7 @@ footer {
       border: 2px solid $orange-900;
       background-color: #fff;
       color: $title;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -674,6 +776,7 @@ footer {
       color: #FF6838;
       border: 2px solid $orange-900;
       border-radius: 5px;
+      transition: all 0.3s;
 
       path {
         fill: $orange-900;
@@ -684,6 +787,7 @@ footer {
       background-color: #fff;
       box-shadow: 0px -5px 12px 0px rgba(255, 104, 56, 0.2) inset;
       color: #363853;
+      transition: all 0.3s;
     }
 
   }
@@ -698,18 +802,21 @@ footer {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:hover {
       stroke: $orange-900;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:active {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
   }
 
@@ -732,6 +839,7 @@ footer {
       border: 2px solid $orange-900;
       background-color: #fff;
       color: $title;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -739,6 +847,7 @@ footer {
       color: #FF6838;
       border: 2px solid $orange-900;
       border-radius: 5px;
+      transition: all 0.3s;
 
       path {
         fill: $orange-900;
@@ -749,6 +858,7 @@ footer {
       background-color: #fff;
       box-shadow: 0px -5px 12px 0px rgba(255, 104, 56, 0.2) inset;
       color: #363853;
+      transition: all 0.3s;
     }
 
   }
@@ -763,18 +873,21 @@ footer {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:hover {
       stroke: $orange-900;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:active {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
   }
 
@@ -798,6 +911,7 @@ footer {
       border: 2px solid $orange-900;
       background-color: #fff;
       color: $title;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -805,6 +919,7 @@ footer {
       color: #FF6838;
       border: 2px solid $orange-900;
       border-radius: 5px;
+      transition: all 0.3s;
 
       path {
         fill: $orange-900;
@@ -815,6 +930,7 @@ footer {
       background-color: #fff;
       box-shadow: 0px -5px 12px 0px rgba(255, 104, 56, 0.2) inset;
       color: #363853;
+      transition: all 0.3s;
     }
 
   }
@@ -829,18 +945,21 @@ footer {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:hover {
       stroke: $orange-900;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
 
     &:active {
       stroke: #363853;
       border: none;
       border-radius: none;
+      transition: all 0.3s;
     }
   }
 
@@ -871,6 +990,7 @@ footer {
     &:hover {
       box-shadow: 0px 0px 0px 1px rgba(255, 104, 56, 1);
       border-color: 5px solid $orange-900;
+      transition: all 0.3s;
     }
   }
 
@@ -937,8 +1057,30 @@ footer {
 }
 
 .categories-bottom {
+  display: block;
+
   &__link {
     text-decoration: underline;
+
+    &:focus {
+      text-decoration: none;
+      border: 2px solid $orange-900;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $orange-900;
+      transition: color 0.3s;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: $orange-900;
+      border-radius: none;
+      filter: drop-shadow(1px 1px 2px #31352B80);
+      transition: filter 0.3s;
+    }
 
   }
 
@@ -949,6 +1091,26 @@ footer {
     line-height: 30px;
     @extend %rubik-400;
     text-align: center;
+
+    &:focus {
+      text-decoration: none;
+      border: 2px solid $orange-900;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $orange-900;
+      transition: color 0.3s;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: $orange-900;
+      border-radius: none;
+      filter: drop-shadow(1px 1px 2px #31352B80);
+      transition: filter 0.3s;
+    }
   }
 }
 
@@ -1034,6 +1196,37 @@ footer {
     font-size: 18px;
     line-height: 23px;
     @extend %rubik-400;
+
+    &:focus {
+      border: 2px solid $orange-900;
+      border-radius: 5px;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      color: $orange-900;
+      background-color: rgba(255, 122, 80, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      transition: opacity 0.3s;
+      border: 2px solid $orange-900;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      box-shadow: 0px 5px 12px 0px rgba(255, 104, 56, 0.2);
+      color: $orange-900;
+      transition: background-color 0.3s;
+    }
+
+    &:active {
+      opacity: 0.5;
+      transition: opacity 0.3s;
+      background: rgba(255, 122, 80, 0.1);
+      color: $orange-900;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
   }
 
 }
@@ -1066,6 +1259,11 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+
+    &:hover {
+      box-shadow: 0px 3px 15px 0px rgba(255, 104, 56, 0.5);
+      transition: all 0.3s;
+    }
   }
 
   &__img {
@@ -1300,6 +1498,21 @@ footer {
   left: 0;
   margin-top: 0;
   margin-left: 480px;
+  // img:focus{
+  //   background-color: #fff;
+  //   stroke: $orange-900;
+  //   border-color: $orange-900;
+  // }
+  // img:hover{
+  //   background-color: rgba(255, 174, 148, 1);
+  //   stroke: $orange-900;
+  //   border-color: $orange-900;
+  // }
+  // img:active{
+  //   background-color: rgba(255, 242, 237, 1);
+  //   stroke: $orange-900;
+  //   border-color: rgba(255, 242, 237, 1);
+  // }
 
 }
 
@@ -1388,13 +1601,6 @@ footer {
   }
 }
 
-// .jq-selectbox__select {
-//   background-color: #fff;
-//   border: 1px solid #C2C2C2;
-//   border-radius: 3px;
-//   height: 47px;
-// }
-
 
 .jq-selectbox__select {
   margin-left: 5px;
@@ -1413,6 +1619,7 @@ footer {
 
   &:hover {
     background: transparent;
+    transition: all 0.3s;
   }
 }
 
@@ -1492,6 +1699,7 @@ footer {
     &:focus {
       border: 2px solid $orange-900;
       border-radius: 8px;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -1536,6 +1744,7 @@ footer {
     &:hover {
       box-shadow: 0px 0px 0px 1px rgba(255, 104, 56, 1);
       border-color: 5px solid $orange-900;
+      transition: all 0.3s;
     }
   }
 
@@ -1746,6 +1955,12 @@ footer {
     height: 392px;
     border-radius: 10px;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 3px 15px 0px rgba(255, 104, 56, 0.5);
+      transition: all 0.3s;
+    }
   }
 
   &__text {
