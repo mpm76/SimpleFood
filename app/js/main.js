@@ -25,8 +25,8 @@ $(function (params) {
 
   $('.slider__inner').slick({
     dots: true,
-    prevArrow: '<button type = "button"class="slick-prev"><img src="images/icons/prev-arrow.svg" alt="arrow-left">Previous</button>',
-    nextArrow: '<button type = "button"class="slick-next"><img src="images/icons/next-arrow.svg" alt="arrow-right"></button>',
+    prevArrow: '<button type = "button"class="slick-prev"><img class="slick-prev__img" src="images/icons/prev-arrow.svg" alt="arrow-left">Previous</button>',
+    nextArrow: '<button type = "button"class="slick-next"><img class="slick-next__img" src="images/icons/next-arrow.svg" alt="arrow-right"></button>',
   });
 
     $(".product-page__item-star").rateYo({

@@ -1485,6 +1485,21 @@ footer {
 
 .slick-active button {
   background-color: $orange-900;
+
+  &:hover {
+    background-color: #FFF2ED;
+    border-color: $orange-900;
+    box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
+  }
+
+  &:focus {
+    background-color: #C2C2C2;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 1);
+  }
+
+  &:active {
+    background-color: #FFAE94;
+  }
 }
 
 .slick-prev {
@@ -1498,23 +1513,24 @@ footer {
   left: 0;
   margin-top: 0;
   margin-left: 480px;
-  // img:focus{
-  //   background-color: #fff;
-  //   stroke: $orange-900;
-  //   border-color: $orange-900;
-  // }
-  // img:hover{
-  //   background-color: rgba(255, 174, 148, 1);
-  //   stroke: $orange-900;
-  //   border-color: $orange-900;
-  // }
-  // img:active{
-  //   background-color: rgba(255, 242, 237, 1);
-  //   stroke: $orange-900;
-  //   border-color: rgba(255, 242, 237, 1);
-  // }
+
 
 }
+
+
+.slick-prev__img {
+  &:hover {
+    filter: invert(27%) sepia(19%) saturate(952%) hue-rotate(323deg) brightness(102%) contrast(101%);
+  }
+}
+
+.slick-next__img {
+  &:hover {
+    filter: invert(27%) sepia(19%) saturate(952%) hue-rotate(323deg) brightness(102%) contrast(101%);
+  }
+}
+
+
 
 .slick-next {
   border: none;
@@ -1528,7 +1544,10 @@ footer {
   margin-top: -14px;
   margin-right: 480px;
 
+
 }
+
+.slick-active {}
 
 .prev__arrow {
   margin-right: 20px;
