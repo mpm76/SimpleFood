@@ -4,8 +4,106 @@
 @import 'libs';
 @import 'global';
 
+.burger-menu {
+
+
+  max-width: 375px;
+  display: flex;
+  justify-content: left;
+  display: none;
+
+  &__info {
+    max-width: 300px;
+    height: 717px;
+    background-color: #fff;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 15px;
+  }
+
+  &__btn {
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-right: 10px;
+  }
+
+  &__img--close {
+    width: 18px;
+    height: 18px;
+    margin-top: 13px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #EEEFF3;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #EEEFF3;
+  }
+
+  &__list-item {
+    margin-bottom: 20px;
+  }
+
+  &__list-link {
+    color: $abg;
+    font-size: 18px;
+    line-height: 21px;
+    @extend %rubik-400;
+
+    &:focus {
+      border: 2px solid $orange-900;
+      border-radius: 8px;
+    }
+
+    &:hover {
+      color: $orange-900;
+      transition: color 0.3s;
+    }
+
+    &:active {
+      color: $orange-900;
+      border-radius: none;
+      filter: drop-shadow(1px 1px 2px #31352B80);
+      transition: filter 0.3s;
+    }
+  }
+
+  &__nav {
+    margin-left: 15px;
+  }
+
+  &__contact {
+    margin-left: 15px;
+  }
+
+  span {
+    width: 75px;
+    height: 717px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+  }
+
+
+}
+
+
+
 .header {
   padding: 60px 0;
+  flex-wrap: wrap;
 
   &__inner {
     display: flex;
@@ -44,6 +142,11 @@
 }
 
 .menu {
+  &__btn {
+    display: none;
+    cursor: pointer;
+  }
+
   &__list {
     display: flex;
   }
@@ -164,6 +267,10 @@
 footer {
   background-color: $default;
   padding-bottom: 30px;
+}
+
+.footer-top__item--media {
+  display: none;
 }
 
 .footer-top {
@@ -411,6 +518,10 @@ footer {
     }
   }
 
+}
+
+.footer-top__item--media {
+  display: none;
 }
 
 
@@ -1512,7 +1623,7 @@ footer {
   transform: translateY(-50%);
   left: 0;
   margin-top: 0;
-  margin-left: 480px;
+  left: 465px;
 
 
 }
@@ -1542,12 +1653,10 @@ footer {
   transform: translateY(-50%);
   right: 0;
   margin-top: -14px;
-  margin-right: 480px;
+  right: 465px;
 
 
 }
-
-.slick-active {}
 
 .prev__arrow {
   margin-right: 20px;
@@ -1614,6 +1723,7 @@ footer {
     color: $title;
   }
 
+
   &__filter {
     width: 256px;
     height: 47px;
@@ -1625,6 +1735,12 @@ footer {
       border-color: $orange-900;
       transition: all 0.3s;
     }
+  }
+  &__filter-form {
+   
+  }
+  &__filter-btn {
+   display: none;
   }
 }
 
@@ -1703,6 +1819,12 @@ footer {
 }
 
 
+
+.catalog-product {
+  &__filter-burger {
+    display: none;
+  }
+}
 
 
 .catalog-product {
