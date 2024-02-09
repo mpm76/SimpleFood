@@ -2952,15 +2952,22 @@ footer {
 
   .slick-prev {
     top: -77px;
-    left: 574px;
+    left: 1060px;
   }
 
   .slick-next {
     top: -64px;
-    right: -475px
+    right: 0px;
   }
 }
 
+.product-page__smoll-img {
+  display: none;
+}
+
+.product-interest__mini-slide{
+  display: none;
+}
 
 
 
